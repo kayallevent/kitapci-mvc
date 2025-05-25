@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Kayıt Ol</title>
+        <style>
+            body{
+            background-color: #eff0e9;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+            margin: 0;
+            }
+            .giris-karti{
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 350px;
+            }
+            h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+         label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="email"],
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 30%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 20px;            
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .unuttum{
+            width: 20%;
+            background-color: #3649f4;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 12px;
+            transition: 0.3s;
+            display: flex; justify-content: flex-end;
+        }        
+        .unuttum:hover{
+            background-color: #3f2fd3;
+        }
+        </style>
+    </head>     
+   <body>
+    <form>
+        <h2>Kayıt Ol</h2>
+        Email Adresiniz:<input type="email" name="email" size="20"/>
+        Kullanıcı Adı:<input type="text" name="kadi" size="20"/>        
+        Parola:<input type="password" name="sifre" maxlength="8"/>  
+        Parola Tekrar:<input type="password" name="sifre" maxlength="8"/>  
+        <input type="submit" value="Kayıt" onclick="alert('Yakında aktif edilecek.')"/>        
+    </form>
+   </body>
+
+</html>

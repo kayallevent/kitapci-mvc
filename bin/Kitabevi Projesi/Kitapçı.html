@@ -1,0 +1,230 @@
+<html>
+    <head>
+        <title>Kitap Galerisi</title>    
+      <style> 
+            .kitaplar {
+                display: flex;
+                gap: 120px;
+                margin-top: 20px;
+                flex-wrap: wrap;       
+                font-family: Arial;                                                   
+            }
+            
+            .kitap-kutu {
+                border: 1px solid #ccc;
+                padding: 10px;
+                text-align: center;
+                background-color: #f9f9f9;
+                width: 220px;
+                transition: 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .kitap-kutu img{
+                width: 200px;
+                height: 250px;
+                border: 5px solid black;
+            }
+            .kitap-kutu table{
+                margin-top: 10px;
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .kitap-kutu th, .kitap-kutu td{
+                border: 1px solid black;
+                padding: 5px;
+            }
+            .kitap-kutu:hover{
+                transform: scale(1.05);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            }
+            .navbar{
+                background-color: #333;
+                color: white;
+                padding: 10px 30px;
+                font-family: Arial;
+                position: sticky;
+                margin: 0;
+                z-index: 100;
+            }
+            .navbar h2{
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                background-color: #f2f2f2;
+                padding: 30px;
+                font-family: Arial, sans-serif;
+            }       
+        </style>
+        <div style="display: flex; justify-content: flex-end; gap: 10px; background-color: #333; padding: 10px;">     
+            <a href="Giris.html" class="btn">Giriş Yap</a>
+            <a href="Kayıt.html" class="btn">Kayıt Ol</a>
+        </div>
+        
+        <style>
+            .btn{
+                background-color: #4CAF50;
+                color: white;
+                padding: 8px 15px;
+                text-decoration: none;
+                margin-left: 10px;
+                border-radius: 4px;
+                font-family: Arial;
+            }    
+            .btn:hover{
+                background-color: #4CAF50;
+                transform: scale(1.05);
+            }                    
+        </style>
+        
+    </head>
+    <body>        
+        <div class="navbar">
+            <h2>📚 Kitabeviniz</h2>
+        </div>
+        <h3>Popüler Kitaplar</h3>
+        <div class="kitaplar">
+            <div class="kitap-kutu">
+                 <img src="kitap.jpeg" alt="Kürk Mantolu Madonna">
+                 <table>
+                    <tr>
+                        <th>Kitap Adı</th>
+                        <th> Fiyat</th>
+                    </tr>
+                    <tr>
+                        <td>Kürk Mantolu Madonna</td>
+                        <td>26.99</td>
+                    </tr>
+                 </table>
+            </div>
+
+            <div class="kitap-kutu">
+            <img src ="kitap(1).jpeg" alt="Song Of Ice And Fire">
+             <table>
+                    <tr>
+                        <th>Kitap Adı</th>
+                        <th> Fiyat</th>
+                    </tr>
+                    <tr>
+                        <td>Song Of Ice And Fire</td>
+                        <td>79.99</td>
+                    </tr>
+                 </table>
+            </div>
+
+            <div class="kitap-kutu">
+                <img src ="kitap(2).jpeg" alt="Song Of Ice And Fire">
+             <table>                
+                    <tr>
+                        <th>Kitap Adı</th>
+                        <th> Fiyat</th>
+                    </tr>
+                    <tr>
+                        <td>Notre Dame'ın Kamburu</td>
+                        <td>69.99</td>
+                    </tr>
+                 </table>
+            </div>
+
+            <div class="kitap-kutu">
+                <img src ="kitap(3).jpeg" alt="Nutuk">
+             <table>
+                    <tr>
+                        <th>Kitap Adı</th>
+                        <th> Fiyat</th>
+                    </tr>
+                    <tr>
+                        <td>Nutuk</td>
+                        <td>89.99</td>
+                    </tr>
+                 </table>
+            </div>
+
+            <div class="kitap-kutu">
+                <img src ="Kucukprens.jpg" alt="Küçük Prens">
+             <table>
+                    <tr>
+                        <th>Kitap Adı</th>
+                        <th> Fiyat</th>
+                    </tr>
+                    <tr>
+                        <td>Küçük Prens</td>
+                        <td>69.99</td>
+                    </tr>
+                 </table>
+            </div>
+
+            <div class="kitap-kutu">
+                <img src ="Harrypot.jpeg" alt="Harry Potter ve Felsefe Taşı">
+             <table>
+                    <tr>
+                        <th>Kitap Adı</th>
+                        <th> Fiyat</th>
+                    </tr>
+                    <tr>
+                        <td>Harry Potter ve Felsefe Taşı</td>
+                        <td>144.99</td>
+                    </tr>
+                 </table>
+            </div>
+
+            <div class="kitap-kutu">
+                <img src ="wi_500.jpeg" alt="Hobbit">
+             <table>
+                    <tr>
+                        <th>Kitap Adı</th>
+                        <th> Fiyat</th>
+                    </tr>
+                    <tr>
+                        <td>Hobbit</td>
+                        <td>159.99</td>
+                    </tr>
+                 </table>
+            </div>
+
+            <div class="kitap-kutu">
+                <img src ="Heidi.jpeg" alt="Heidi">
+             <table>
+                    <tr>
+                        <th>Kitap Adı</th>
+                        <th> Fiyat</th>
+                    </tr>
+                    <tr>
+                        <td>Heidi</td>
+                        <td>124.99</td>
+                    </tr>
+                 </table>
+            </div>
+
+            <div class="kitap-kutu">
+                <img src ="wi_800.jpeg" alt="Don Kişot">
+             <table>
+                    <tr>
+                        <th>Kitap Adı</th>
+                        <th> Fiyat</th>
+                    </tr>
+                    <tr>
+                        <td>Don Kişot</td>
+                        <td>44.99</td>
+                    </tr>
+                 </table>
+            </div>
+
+            <div class="kitap-kutu">
+                <img src ="Çalıkuşu.jpg" alt="Çalıkuşu">
+             <table>
+                    <tr>
+                        <th>Kitap Adı</th>
+                        <th> Fiyat</th>
+                    </tr>
+                    <tr>
+                        <td>Çalıkuşu</td>
+                        <td>494.99</td>
+                    </tr>
+                 </table>
+            </div>           
+
+        </div>                   
+
+     </body>
+</html>
