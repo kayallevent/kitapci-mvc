@@ -1,7 +1,7 @@
 services:
   - type: web
     name: kitapci-mvc
-    env: dotnet
+    runtime: dotnet
     buildCommand: dotnet publish -c Release -o out
     startCommand: dotnet Basics.dll    
     plan: free
