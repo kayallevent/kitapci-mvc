@@ -1,0 +1,24 @@
+@{
+    ViewBag.Title = "Admin Giriş";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // İsteğe bağlı. Ayrı bir layout da kullanabilirsin.
+}
+
+<h2>Admin Giriş</h2>
+
+<form method="post" asp-controller="Admin" asp-action="Login">
+    <div class="form-group">
+        <label for="username">Kullanıcı Adı</label>
+        <input type="text" name="username" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label for="password">Şifre</label>
+        <input type="password" name="password" class="form-control" required />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Giriş Yap</button>
+
+    @if (ViewBag.Error != null)
+    {
+        <p style="color:red;">@ViewBag.Error</p>
+    }
+</form>
