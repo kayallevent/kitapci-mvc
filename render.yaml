@@ -3,7 +3,7 @@ services:
     name: kitapci-mvc
     runtime: dotnet6
     buildCommand: dotnet publish -c Release -o out
-    startCommand: dotnet Basics.dll    
+    startCommand: dotnet Basics.dll
     plan: free
     region: frankfurt
     branch: master
