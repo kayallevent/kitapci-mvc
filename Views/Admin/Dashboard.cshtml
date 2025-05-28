@@ -1,10 +1,22 @@
 @{
     ViewBag.Title = "Admin Panel";
-    Layout = "~/Views/Shared/_Layout.cshtml"; // Ya da ayrı bir admin layout dosyası da kullanabilirsin
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
 }
+<div class="container mt-4">
+    <div class="alert alert-success">Hoş geldiniz, admin!</div>
 
-<h2>Admin Paneline Hoş Geldiniz</h2>
-
-<p>Buradan kitapları, kullanıcıları veya diğer içerikleri yönetebilirsiniz.</p>
-
-<a href="/Admin/Logout" class="btn btn-danger">Çıkış Yap</a>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="#">Kitapları Görüntüle</a>
+        </li>
+        <li class="list-group-item">
+            <a href="#">Yeni Kitap Ekle</a>
+        </li>
+        <li class="list-group-item">
+            <a href="#">Kullanıcıları Yönet</a>
+        </li>
+        <li class="list-group-item">
+            <a href="/Admin/Logout">Çıkış Yap</a>
+        </li>
+    </ul>
+</div>
