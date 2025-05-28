@@ -41,3 +41,7 @@ app.UseAuthorization();
 
 
 app.Run();
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.ListenAnyIP(8080); // Render'ın beklediği port
+});

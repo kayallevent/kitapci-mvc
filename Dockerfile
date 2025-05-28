@@ -12,3 +12,4 @@ WORKDIR /app
 COPY --from=build /app/out .
 
 ENTRYPOINT ["dotnet", "Basics.dll"]
+EXPOSE 8080
