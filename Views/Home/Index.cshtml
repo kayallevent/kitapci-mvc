@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Basics.Models.Kitap>
+@{
     ViewData["Title"] = "Kitap Galerisi";
 }
 
@@ -88,240 +89,281 @@
     </head>
     <body>        
         <div class="navbar">
-            <h2>📚 Kitabeviniz</h2>
-        </div>
-        <h3>Popüler Kitaplar</h3>
-        <div class="kitaplar">
-            <div class="kitap-kutu">
-                <img src="~/img/kitap.jpeg" alt="Kürk Mantolu Madonna">
-                 <table>
+    <h2>📚 Kitabeviniz</h2>
+</div>
+
+<h3>Popüler Kitaplar</h3>
+<div class="kitaplar">
+    <div class="kitap-kutu">
+        <table>
+            <thead>
+                <tr>
+                    <th>Kitap Adı</th>
+                    <th>Fiyat</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var kitap in Model)
+                {
                     <tr>
-                        <th>Kitap Adı</th>
-                        <th> Fiyat</th>
+                        <td>
+                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
+                            @kitap.Ad
+                        </td>
+                        <td>@kitap.Fiyat ₺</td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Kürk Mantolu Madonna</td>
-                        <td>26.99</td>
-                    </tr>
-                    @foreach (var kitap in Model)
-{
-    <div class="card">
-        <h5>@kitap.Ad</h5>
-        <p>@kitap.Yazar</p>
-        <a class="btn btn-success" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                }
+            </tbody>
+        </table>
     </div>
-}
+</div>
 
-                 </table>
-            </div>
 
-            <div class="kitap-kutu">
-            <img src ="~/img/kitap(1).jpeg" alt="Song Of Ice And Fire">
-             <table>
+           <div class="kitap-kutu">
+        <table>
+            <thead>
+                <tr>
+                    <th>Kitap Adı</th>
+                    <th>Fiyat</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var kitap in Model)
+                {
                     <tr>
-                        <th>Kitap Adı</th>
-                        <th> Fiyat</th>
+                        <td>
+                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
+                            @kitap.Ad
+                        </td>
+                        <td>@kitap.Fiyat ₺</td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Song Of Ice And Fire</td>
-                        <td>79.99</td>
-                    </tr>
-                    @foreach (var kitap in Model)
-{
-    <div class="card">
-        <h5>@kitap.Ad</h5>
-        <p>@kitap.Yazar</p>
-        <a class="btn btn-success" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                }
+            </tbody>
+        </table>
     </div>
-}
-
-                 </table>
-            </div>
-
-            <div class="kitap-kutu">
-                <img src ="~/img/kitap(2).jpeg" alt="Song Of Ice And Fire">
-             <table>                
-                    <tr>
-                        <th>Kitap Adı</th>
-                        <th> Fiyat</th>
-                    </tr>
-                    <tr>
-                        <td>Notre Dame'ın Kamburu</td>
-                        <td>69.99</td>
-                    </tr>
-                    @foreach (var kitap in Model)
-{
-    <div class="card">
-        <h5>@kitap.Ad</h5>
-        <p>@kitap.Yazar</p>
-        <a class="btn btn-success" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
-    </div>
-}
-
-                 </table>
-            </div>
 
             <div class="kitap-kutu">
-                <img src ="~/img/kitap(3).jpeg" alt="Nutuk">
-             <table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kitap Adı</th>
+                    <th>Fiyat</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var kitap in Model)
+                {
                     <tr>
-                        <th>Kitap Adı</th>
-                        <th> Fiyat</th>
+                        <td>
+                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
+                            @kitap.Ad
+                        </td>
+                        <td>@kitap.Fiyat ₺</td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Nutuk</td>
-                        <td>89.99</td>
-                    </tr>
-                    @foreach (var kitap in Model)
-{
-    <div class="card">
-        <h5>@kitap.Ad</h5>
-        <p>@kitap.Yazar</p>
-        <a class="btn btn-success" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                }
+            </tbody>
+        </table>
     </div>
-}
-
-                 </table>
-            </div>
 
             <div class="kitap-kutu">
-                <img src ="~/img/Kucukprens.jpg" alt="Küçük Prens">
-             <table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kitap Adı</th>
+                    <th>Fiyat</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var kitap in Model)
+                {
                     <tr>
-                        <th>Kitap Adı</th>
-                        <th> Fiyat</th>
+                        <td>
+                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
+                            @kitap.Ad
+                        </td>
+                        <td>@kitap.Fiyat ₺</td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Küçük Prens</td>
-                        <td>69.99</td>
-                    </tr>
-                    @foreach (var kitap in Model)
-{
-    <div class="card">
-        <h5>@kitap.Ad</h5>
-        <p>@kitap.Yazar</p>
-        <a class="btn btn-success" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                }
+            </tbody>
+        </table>
     </div>
-}
-
-                 </table>
-            </div>
 
             <div class="kitap-kutu">
-                <img src ="~/img/Harrypot.jpeg" alt="Harry Potter ve Felsefe Taşı">
-             <table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kitap Adı</th>
+                    <th>Fiyat</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var kitap in Model)
+                {
                     <tr>
-                        <th>Kitap Adı</th>
-                        <th> Fiyat</th>
+                        <td>
+                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
+                            @kitap.Ad
+                        </td>
+                        <td>@kitap.Fiyat ₺</td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Harry Potter ve Felsefe Taşı</td>
-                        <td>144.99</td>
-                    </tr>
-                    @foreach (var kitap in Model)
-{
-    <div class="card">
-        <h5>@kitap.Ad</h5>
-        <p>@kitap.Yazar</p>
-        <a class="btn btn-success" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                }
+            </tbody>
+        </table>
     </div>
-}
-
-                 </table>
-            </div>
 
             <div class="kitap-kutu">
-                <img src ="~/img/wi_500.jpeg" alt="Hobbit">
-             <table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kitap Adı</th>
+                    <th>Fiyat</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var kitap in Model)
+                {
                     <tr>
-                        <th>Kitap Adı</th>
-                        <th> Fiyat</th>
+                        <td>
+                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
+                            @kitap.Ad
+                        </td>
+                        <td>@kitap.Fiyat ₺</td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Hobbit</td>
-                        <td>159.99</td>
-                    </tr>
-                    @foreach (var kitap in Model)
-{
-    <div class="card">
-        <h5>@kitap.Ad</h5>
-        <p>@kitap.Yazar</p>
-        <a class="btn btn-success" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                }
+            </tbody>
+        </table>
     </div>
-}
 
-                 </table>
-            </div>
+           <div class="kitap-kutu">
+        <table>
+            <thead>
+                <tr>
+                    <th>Kitap Adı</th>
+                    <th>Fiyat</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var kitap in Model)
+                {
+                    <tr>
+                        <td>
+                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
+                            @kitap.Ad
+                        </td>
+                        <td>@kitap.Fiyat ₺</td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
             <div class="kitap-kutu">
-                <img src ="~/img/Heidi.jpeg" alt="Heidi">
-             <table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kitap Adı</th>
+                    <th>Fiyat</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var kitap in Model)
+                {
                     <tr>
-                        <th>Kitap Adı</th>
-                        <th> Fiyat</th>
+                        <td>
+                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
+                            @kitap.Ad
+                        </td>
+                        <td>@kitap.Fiyat ₺</td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Heidi</td>
-                        <td>124.99</td>
-                    </tr>@foreach (var kitap in Model)
-{
-    <div class="card">
-        <h5>@kitap.Ad</h5>
-        <p>@kitap.Yazar</p>
-        <a class="btn btn-success" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                }
+            </tbody>
+        </table>
     </div>
-}
-
-                 </table>
-            </div>
 
             <div class="kitap-kutu">
-                <img src ="~/img/wi_800.jpeg" alt="Don Kişot">
-             <table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Kitap Adı</th>
+                    <th>Fiyat</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var kitap in Model)
+                {
                     <tr>
-                        <th>Kitap Adı</th>
-                        <th> Fiyat</th>
+                        <td>
+                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
+                            @kitap.Ad
+                        </td>
+                        <td>@kitap.Fiyat ₺</td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Don Kişot</td>
-                        <td>44.99</td>
-                    </tr>
-                    @foreach (var kitap in Model)
-{
-    <div class="card">
-        <h5>@kitap.Ad</h5>
-        <p>@kitap.Yazar</p>
-        <a class="btn btn-success" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                }
+            </tbody>
+        </table>
     </div>
-}
 
-                 </table>
-            </div>
-
-            <div class="kitap-kutu">
-                <img src ="~/img/Çalıkuşu.jpg" alt="Çalıkuşu">
-             <table>
+          <div class="kitap-kutu">
+        <table>
+            <thead>
+                <tr>
+                    <th>Kitap Adı</th>
+                    <th>Fiyat</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var kitap in Model)
+                {
                     <tr>
-                        <th>Kitap Adı</th>
-                        <th> Fiyat</th>
+                        <td>
+                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
+                            @kitap.Ad
+                        </td>
+                        <td>@kitap.Fiyat ₺</td>
+                        <td>
+                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>Çalıkuşu</td>
-                        <td>494.99</td>
-                    </tr>
-                    @foreach (var kitap in Model)
-{
-    <div class="card">
-        <h5>@kitap.Ad</h5>
-        <p>@kitap.Yazar</p>
-        <a class="btn btn-success" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+                }
+            </tbody>
+        </table>
     </div>
-}
-
-                 </table>
-            </div>           
-
-        </div>                   
-
      </body>
 </html>
