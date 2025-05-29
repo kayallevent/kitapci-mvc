@@ -1,1 +1,14 @@
-<a href="/Home/Kayit" class="btn">Kayıt Ol</a>
+@{
+    ViewData["Title"] = "Kayıt Ol";
+}
+<h2>Kayıt Ol</h2>
+
+<form method="post" action="/Home/Kayit">
+    <label>Kullanıcı Adı:</label>
+    <input type="text" name="username" required /><br /><br />
+    <label>E-posta:</label>
+    <input type="email" name="email" required /><br /><br />
+    <label>Şifre:</label>
+    <input type="password" name="password" required /><br /><br />
+    <button type="submit">Kayıt Ol</button>
+</form>

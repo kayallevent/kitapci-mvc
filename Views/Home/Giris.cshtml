@@ -1,1 +1,15 @@
-<a href="/Home/Giris" class="btn">Giriş Yap</a>
+@{
+    ViewData["Title"] = "Giriş Yap";
+}
+<h2>Giriş Yap</h2>
+
+<form method="post" action="/Home/Giris">
+    <label>Kullanıcı Adı:</label>
+    <input type="text" name="username" required /><br /><br />
+    <label>Şifre:</label>
+    <input type="password" name="password" required /><br /><br />
+    <button type="submit">Giriş Yap</button>
+</form>
+
+<br />
+<a href="#" onclick="alert('Yakında aktif olacak'); return false;">Şifremi Unuttum?</a>
