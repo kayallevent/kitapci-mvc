@@ -1,0 +1,24 @@
+@model List<int>
+
+@{
+    ViewBag.Title = "Sepetim";
+}
+
+<h2>Sepetinizdeki Kitaplar</h2>
+
+@if (Model.Count == 0)
+{
+    <p>Sepetiniz boş.</p>
+}
+else
+{
+    <ul>
+        @foreach (var id in Model)
+        {
+            <li>
+                Kitap ID: @id 
+                <a href="/Cart/RemoveFromCart/@id" class="btn btn-danger btn-sm">Sil</a>
+            </li>
+        }
+    </ul>
+}
