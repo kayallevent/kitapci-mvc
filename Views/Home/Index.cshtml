@@ -3,367 +3,73 @@
     ViewData["Title"] = "Kitap Galerisi";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
 <html>
-    <head>
-        <title>Kitap Galerisi</title>    
-      <style> 
-            .kitaplar {
-                display: flex;
-                gap: 120px;
-                margin-top: 20px;
-                flex-wrap: wrap;       
-                font-family: Arial;                                                   
-            }
-            
-            .kitap-kutu {
-                border: 1px solid #ccc;
-                padding: 10px;
-                text-align: center;
-                background-color: #f9f9f9;
-                width: 220px;
-                transition: 0.3s ease, box-shadow 0.3s ease;
-            }
+<head>
+    <title>Kitap Galerisi</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px 30px;
+            font-family: Arial;
+        }
+        .kitaplar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .kitap-kutu {
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 220px;
+            background-color: #fff;
+            text-align: center;
+            transition: 0.3s ease;
+        }
+        .kitap-kutu img {
+            width: 100%;
+            height: auto;
+            border: 2px solid black;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
 
-            .kitap-kutu img{
-                width: 200px;
-                height: 250px;
-                border: 5px solid black;
-            }
-            .kitap-kutu table{
-                margin-top: 10px;
-                width: 100%;
-                border-collapse: collapse;
-            }
-            .kitap-kutu th, .kitap-kutu td{
-                border: 1px solid black;
-                padding: 5px;
-            }
-            .kitap-kutu:hover{
-                transform: scale(1.05);
-                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            }
-            .navbar{
-                background-color: #333;
-                color: white;
-                padding: 10px 30px;
-                font-family: Arial;
-                position: sticky;
-                margin: 0;
-                z-index: 100;
-            }
-            .navbar h2{
-                margin: 0;
-                padding: 0;
-            }
-            body{
-                background-color: #f2f2f2;
-                padding: 30px;
-                font-family: Arial, sans-serif;
-            }       
-        </style>
-        <div style="display: flex; justify-content: flex-end; gap: 10px; background-color: #333; padding: 10px;">     
-            <a href="/Kullanici/Giris" class="btn">Giriş Yap</a>
-            <a href="/Kullanici/Kayit" class="btn">Kayıt Ol</a>
-        </div>
-        
-        <style>
-            .btn{
-                background-color: #4CAF50;
-                color: white;
-                padding: 8px 15px;
-                text-decoration: none;
-                margin-left: 10px;
-                border-radius: 4px;
-                font-family: Arial;
-            }    
-            .btn:hover{
-                background-color: #4CAF50;
-                transform: scale(1.05);
-            }                    
-        </style>
-        
-    </head>
-    <body>        
-        <div class="navbar">
-    <h2>📚 Kitabeviniz</h2>
-</div>
-
-<h3>Popüler Kitaplar</h3>
-<div class="kitaplar">
-    <div class="kitap-kutu">
-        <table>
-            <thead>
-                <tr>
-                    <th>Kitap Adı</th>
-                    <th>Fiyat</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var kitap in Model)
-                {
-                    <tr>
-                        <td>
-                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
-                            @kitap.Ad
-                        </td>
-                        <td>@kitap.Fiyat ₺</td>
-                        <td>
-                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-</div>
-
-
-           <div class="kitap-kutu">
-        <table>
-            <thead>
-                <tr>
-                    <th>Kitap Adı</th>
-                    <th>Fiyat</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var kitap in Model)
-                {
-                    <tr>
-                        <td>
-                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
-                            @kitap.Ad
-                        </td>
-                        <td>@kitap.Fiyat ₺</td>
-                        <td>
-                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+    <div class="navbar">
+        <h2>📚 Kitabeviniz</h2>
     </div>
 
+    <h3>Popüler Kitaplar</h3>
+    <div class="kitaplar">
+        @foreach (var kitap in Model)
+        {
             <div class="kitap-kutu">
-        <table>
-            <thead>
-                <tr>
-                    <th>Kitap Adı</th>
-                    <th>Fiyat</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var kitap in Model)
-                {
-                    <tr>
-                        <td>
-                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
-                            @kitap.Ad
-                        </td>
-                        <td>@kitap.Fiyat ₺</td>
-                        <td>
-                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+                <img src="~/img/kitap.jpeg" alt="@kitap.Ad" />
+                <h4>@kitap.Ad</h4>
+                <p>@kitap.Fiyat ₺</p>
+                <a class="btn" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
+            </div>
+        }
     </div>
 
-            <div class="kitap-kutu">
-        <table>
-            <thead>
-                <tr>
-                    <th>Kitap Adı</th>
-                    <th>Fiyat</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var kitap in Model)
-                {
-                    <tr>
-                        <td>
-                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
-                            @kitap.Ad
-                        </td>
-                        <td>@kitap.Fiyat ₺</td>
-                        <td>
-                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-
-            <div class="kitap-kutu">
-        <table>
-            <thead>
-                <tr>
-                    <th>Kitap Adı</th>
-                    <th>Fiyat</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var kitap in Model)
-                {
-                    <tr>
-                        <td>
-                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
-                            @kitap.Ad
-                        </td>
-                        <td>@kitap.Fiyat ₺</td>
-                        <td>
-                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-
-            <div class="kitap-kutu">
-        <table>
-            <thead>
-                <tr>
-                    <th>Kitap Adı</th>
-                    <th>Fiyat</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var kitap in Model)
-                {
-                    <tr>
-                        <td>
-                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
-                            @kitap.Ad
-                        </td>
-                        <td>@kitap.Fiyat ₺</td>
-                        <td>
-                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-
-           <div class="kitap-kutu">
-        <table>
-            <thead>
-                <tr>
-                    <th>Kitap Adı</th>
-                    <th>Fiyat</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var kitap in Model)
-                {
-                    <tr>
-                        <td>
-                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
-                            @kitap.Ad
-                        </td>
-                        <td>@kitap.Fiyat ₺</td>
-                        <td>
-                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-
-            <div class="kitap-kutu">
-        <table>
-            <thead>
-                <tr>
-                    <th>Kitap Adı</th>
-                    <th>Fiyat</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var kitap in Model)
-                {
-                    <tr>
-                        <td>
-                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
-                            @kitap.Ad
-                        </td>
-                        <td>@kitap.Fiyat ₺</td>
-                        <td>
-                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-
-            <div class="kitap-kutu">
-        <table>
-            <thead>
-                <tr>
-                    <th>Kitap Adı</th>
-                    <th>Fiyat</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var kitap in Model)
-                {
-                    <tr>
-                        <td>
-                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
-                            @kitap.Ad
-                        </td>
-                        <td>@kitap.Fiyat ₺</td>
-                        <td>
-                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-
-          <div class="kitap-kutu">
-        <table>
-            <thead>
-                <tr>
-                    <th>Kitap Adı</th>
-                    <th>Fiyat</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var kitap in Model)
-                {
-                    <tr>
-                        <td>
-                            <img src="~/img/kitap.jpeg" alt="@kitap.Ad" width="60" /><br />
-                            @kitap.Ad
-                        </td>
-                        <td>@kitap.Fiyat ₺</td>
-                        <td>
-                            <a class="btn btn-success btn-sm" href="/Cart/AddToCart/@kitap.Id">Sepete Ekle</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-     </body>
+</body>
 </html>
