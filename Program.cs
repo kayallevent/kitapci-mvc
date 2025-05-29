@@ -10,10 +10,8 @@ builder.Services.AddSession(options =>
 });
 
 // Render'ın 8080 portunu dinlemesini sağlar
-builder.WebHost.ConfigureKestrel(serverOptions =>
-{
-    serverOptions.ListenAnyIP(8080);
-});
+builder.WebHost.UseUrls("http://*:8080");
+
 
 var app = builder.Build();
 
