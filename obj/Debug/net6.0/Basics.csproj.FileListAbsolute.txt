@@ -55,3 +55,7 @@ C:\Users\PC\Basics\bin\Debug\net6.0\publish\publish\publish\publish\appsettings.
 C:\Users\PC\Basics\bin\Debug\net6.0\publish\publish\publish\publish\Basics.deps.json
 C:\Users\PC\Basics\bin\Debug\net6.0\publish\publish\publish\publish\Basics.runtimeconfig.json
 C:\Users\PC\Basics\bin\Debug\net6.0\publish\publish\publish\publish\Basics.staticwebassets.endpoints.json
+C:\Users\PC\Basics\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\PC\Basics\obj\Debug\net6.0\Basics.csproj.AssemblyReference.cache
+C:\Users\PC\Basics\obj\Debug\net6.0\Basics.sourcelink.json
+C:\Users\PC\Basics\obj\Debug\net6.0\Basics.csproj.Up2Date

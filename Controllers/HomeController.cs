@@ -23,7 +23,7 @@ public class HomeController : Controller
         new Kitap { Id = 3, Ad = "Heidi", Yazar = "Johanna Spyri", Fiyat = 59.92, ResimUrl = "Heidi.jpeg"},
         new Kitap { Id = 3, Ad = "Harry Potter ve Felsefe Taşı", Yazar = "J.K. Rowling", Fiyat = 145.90, ResimUrl = "Harrypot.jpeg"},
         new Kitap { Id = 3, Ad = "Game Of Thrones Song Of Ice And Fire", Yazar = "George R.R. Martin", Fiyat = 509.99, ResimUrl = "kitap(1).jpeg"},
-        new Kitap { Id = 3, Ad = "Notre-Dame'ın Kamburu", Yazar = "Victor Hugo", Fiyat = 150.00, ResimUrl = "kurk_mantolu_madonna.jpg"},
+        new Kitap { Id = 3, Ad = "Notre-Dame'ın Kamburu", Yazar = "Victor Hugo", Fiyat = 150.00, ResimUrl = "kitap(2).jpeg"},
         new Kitap { Id = 3, Ad = "Nutuk", Yazar = "Mustafa Kemal Atatürk", Fiyat = 136.05, ResimUrl = "kitap(3).jpeg"},
         new Kitap { Id = 3, Ad = "Küçük Prens", Yazar = "Antoine De Saint-Exupery", Fiyat = 60, ResimUrl = "Kucukprens.jpg"},
         new Kitap { Id = 3, Ad = "The Hobbit", Yazar = "J.R.R. Tolkien", Fiyat = 422.24, ResimUrl = "wi_500.jpeg"},
