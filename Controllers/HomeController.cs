@@ -16,7 +16,12 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-         var kitaplar = new List<Kitap>(); // Şimdilik boş liste
+         var kitaplar = new List<Kitap>
+    {
+        new Kitap { Id = 1, Ad = "Kürk Mantolu Madonna", Yazar = "Sabahattin Ali", Fiyat = 65 },
+        new Kitap { Id = 2, Ad = "1984", Yazar = "George Orwell", Fiyat = 75 },
+        new Kitap { Id = 3, Ad = "Sineklerin Tanrısı", Yazar = "William Golding", Fiyat = 60 }
+    };
          return View(kitaplar);
     }
 
