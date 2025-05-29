@@ -6,5 +6,6 @@ namespace Basics.Models
         public string Ad { get; set; }
         public string Yazar { get; set; }
         public double Fiyat { get; set; }
+         public string ResimUrl { get; set; }
     }
 }
