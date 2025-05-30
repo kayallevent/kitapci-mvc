@@ -45,7 +45,7 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Kayıt()
+    public IActionResult Kayit()
     {
         return View();
     }

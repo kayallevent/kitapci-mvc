@@ -1,4 +1,5 @@
-@model List<int>
+@model List<Basics.Models.Kitap>
+    
 
 @{
     ViewBag.Title = "Sepetim";
@@ -13,11 +14,12 @@
 else
 {
     <ul>
-        @foreach (var id in Model)
+        @foreach (var kitap in Model)
         {
             <li>
-                Kitap ID: @id 
-                <a href="/Cart/RemoveFromCart/@id" class="btn btn-danger btn-sm">Sil</a>
+                Kitap ID: @kitap.Id 
+                <a href="/Cart/AddToCart/@kitap.Id" class="btn-sepet">🛒 Sepete Ekle</a>
+
             </li>
         }
     </ul>
