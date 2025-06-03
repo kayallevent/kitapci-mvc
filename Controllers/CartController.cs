@@ -26,9 +26,11 @@ namespace Basics.Controllers
             if (!cart.Contains(id))
             {
                 cart.Add(id);
-                HttpContext.Session.SetObjectAsJson("cart", cart);             
+                HttpContext.Session.SetObjectAsJson("cart", cart);
+                TempData["SuccessMessage"] = "Ürün başarıyla sepete eklendi!";          
             }
-            return RedirectToAction("Index");
+            var referer = Request.Headers["Referer"].ToString();
+            return Redirect(referer);
         }
         private List<Kitap> GetAllBooks()
         {
