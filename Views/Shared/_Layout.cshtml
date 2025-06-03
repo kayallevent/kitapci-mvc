@@ -2,11 +2,6 @@
 @using Microsoft.AspNetCore.Http
 @inject IHttpContextAccessor HttpContextAccessor
 
-@{
-    var cart = HttpContextAccessor.HttpContext?.Session.GetObjectFromJson<List<int>>("cart") ?? new List<int>();
-    var cartCount = cart.Count;
-}
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -20,6 +15,10 @@
     @RenderBody()
 </body>
 <body>
+    @{
+        var cart = HttpContextAccessor.HttpContext?.Session.GetObjectFromJson<List<int>>("cart") ?? new List<int>();
+        var cartCount = cart.Count;
+    }
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
