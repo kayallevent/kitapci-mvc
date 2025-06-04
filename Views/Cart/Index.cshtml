@@ -23,10 +23,11 @@ else
     <ul>
         @foreach (var kitap in Model)
         {
-            <li>
-                Kitap ID: @kitap.Id 
-                <a href="/Cart/AddToCart/@kitap.Id" class="btn-sepet">🛒 Sepete Ekle</a>
-
+          <li>
+                 <strong>@kitap.Ad</strong> - @kitap.Fiyat ₺  
+                 <a href="/Cart/RemoveFromCart/@kitap.Id" class="btn btn-danger btn-sm ms-2">
+                    🗑️ Kaldır
+                   </a>
             </li>
         }
     </ul>
