@@ -16,14 +16,23 @@
 </body>
 <body>
     @{
+    int cartCount = 0;
+    try
+    {
         var cart = HttpContextAccessor.HttpContext?.Session.GetObjectFromJson<List<int>>("cart") ?? new List<int>();
-        var cartCount = cart.Count;
-    }  
+        cartCount = cart.Count;
+    }
+    catch
+    {
+        cartCount = 0;
+    }
+}
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                    <a href="/Cart/Index" class="btn btn-outline-success me-3"></a>
-                        🛒 Sepetim (@cartCount)
+                       
                     </a>
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Basics</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
